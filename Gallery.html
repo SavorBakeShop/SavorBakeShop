@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Savor Bake Shop</title>
+    <!-- Preconnect to Google Fonts for faster loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Link to the "Nanum Gothic" font -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <!-- Internal CSS for styling the webpage -->
+    <style>
+        /* Global styles for the body */
+        body {
+            font-family: 'Nanum Gothic', sans-serif; /* Applying the new font */
+            background-color: white;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        /* Styles for the header */
+        header {
+            background-color: #f8f8f8;
+            padding: 20px;
+            text-align: center;
+        }
+        /* Styles for the logo image in the header */
+        header img {
+            max-width: 300px; /* Adjusted logo size */
+        }
+        /* Styles for the tagline under the logo */
+        .tagline {
+            font-style: italic;
+            margin-top: 10px;
+        }
+        /* Styles for the navigation bar */
+        nav {
+            margin: 20px 0;
+            text-align: center;
+        }
+        /* Styles for the navigation links with the new font and double size */
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-family: 'Nanum Gothic', sans-serif; /* Applying the new font */
+            font-size: 2em; /* Doubling the font size */
+        }
+        /* Styles for the main content area */
+        .content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        /* Styles for the stationary image grid */
+        .image-grid {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2%;
+        }
+        .image-grid img {
+            width: 23%; /* Set the width to ensure four images fit in one row */
+            height: auto;
+            object-fit: cover; /* Ensure images fit within the specified dimensions */
+            transition: transform 0.3s ease; /* Add transition for smooth hover effect */
+            cursor: pointer; /* Change cursor to pointer to indicate clickability */
+        }
+        .image-grid img:hover {
+            transform: scale(1.1); /* Enlarge the image slightly on hover */
+        }
+        /* Styles for the modal (full-screen view) */
+        .modal {
+            display: none; /* Hide the modal by default */
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.8);
+        }
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+        /* Styles for the close button */
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        /* Styles for the footer */
+        footer {
+            background-color: #f8f8f8;
+            text-align: center;
+            padding: 10px;
+            width: 100%;
+        }
+        /* Media queries for mobile responsiveness */
+        @media (max-width: 768px) {
+            nav a {
+                font-size: 1.5em; /* Reduce font size for navigation links on smaller screens */
+                display: block;
+                margin: 10px 0;
+            }
+            .image-grid img {
+                width: 48%; /* Adjust image width for smaller screens */
+            }
+            .modal-content {
+                width: 90%; /* Make modal content more responsive */
+            }
+        }
+        @media (max-width: 480px) {
+            header img {
+                max-width: 200px; /* Adjust logo size for very small screens */
+            }
+            .image-grid img {
+                width: 98%; /* Adjust image width for very small screens */
+            }
+            nav a {
+                font-size: 1.2em; /* Further reduce font size for navigation links on very small screens */
+            }
+            .close {
+                top: 10px; /* Adjust close button position for smaller screens */
+                right: 10px;
+                font-size: 30px; /* Reduce font size of close button */
+            }
+            .modal-content {
+                width: 95%; /* Make modal content more responsive */
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header section with logo -->
+    <header>
+        <img src="assets/pictures/logo-nobackground.png" alt="Savor Bake Shop Logo">
+        <div class="featured">
+            Featured in <i>Gulf Coast Weddings Magazine</i>
+        </div>
+    </header>
+    <!-- Navigation bar -->
+    <nav>
+        <a href="index.html">HOME</a>
+        <a href="Gallery.html">GALLERY</a>
+        <a href="Contact.html">CONTACT</a>
+        <a href="About.html">ABOUT</a>
+    </nav>
+    <!-- Image grid section -->
+    <div class="content">
+        <div class="image-grid">
+            <img src="assets/pictures/Gallery_Pictures/Gallery15.png" alt="gallery Image 14" class="hover-sound">
+            <img src="assets/pictures/Gallery_Pictures/Gallery1.png" alt="Gallery Image 1" class="hover-sound">
+            <img src="assets/pictures/Gallery_Pictures/Gallery2.png" alt="Gallery Image 2" class="hover-sound">
+            <img src="assets/pictures/Gallery_Pictures/Gallery31.png" alt="gallery Image 31" class="hover-sound">
+            <img src="assets/pictures/Gallery_Pictures/Gallery3.png" alt="Gallery Image 3" class="hover-sound">
+            <img src="assets/pictures/Gallery_Pictures/Gallery9.png" alt="gallery Image 9" class="hover-sound">
+            <img src="assets/pictures/Gallery_Pictures/Gallery4.png" alt="Gallery Image 4" class="hover-sound">
+            <img src="assets/pictures/Gallery_Pictures/Gallery6.png" alt="Gallery Image 6" class="hover-sound">
+            <img src="assets/pictures/Gallery_Pictures/Gallery7.png" alt="Gallery Image 7" class="hover-sound">
+            <img src="assets/pictures/Gallery_Pictures/Gallery8.png" alt="Gallery Image 8" class="hover-sound">
+            <img src="assets/pictures/Gallery_Pictures/Gallery14.png" alt="gallery Image 15" class="hover-sound">
+            <img src="assets/pictures/Gallery_Pictures/Gallery10.png" alt="gallery Image 10" class="hover-sound">
+            <img src="assets/pictures/Gallery_Pictures/Gallery11.png" alt="gallery Image 11" class="hover-sound">
+            <img src="assets/pictures/Gallery_Pictures/Gallery12.png" alt="gallery Image 12" class="hover-sound">
+            <img src="assets/pictures/Gallery_Pictures/Gallery13.png" alt="gallery Image 13" class="hover-sound">
+            <img src="assets/pictures/Gallery_Pictures/Gallery16.png" alt="gallery Image 16" class="hover-sound">
+            <img src="assets/pictures/Gallery_Pictures/Gallery17.png" alt="gallery Image 17" class="hover-sound">
+            <img src="assets/pictures/Gallery_Pictures/Gallery19.png" alt="gallery Image 19" class="hover-sound">
+            <img src="assets/pictures/Gallery_Pictures/Gallery20.png" alt="gallery Image 20" class="hover-sound">
+            <img src="assets/pictures/Gallery_Pictures/Gallery21.png" alt="gallery Image 21" class="hover-sound">
+            <img src="assets/pictures/Gallery_Pictures/Gallery22.png" alt="gallery Image 22" class="hover-sound">
+            <img src="assets/pictures/Gallery_Pictures/Gallery23.png" alt="gallery Image 23" class="hover-sound">
+            <img src="assets/pictures/Gallery_Pictures/Gallery5.png" alt="Gallery Image 5" class="hover-sound">
+            <img src="assets/pictures/Gallery_Pictures/Gallery24.png" alt="gallery Image 24" class="hover-sound">
+            <img src="assets/pictures/Gallery_Pictures/Gallery25.png" alt="gallery Image 25" class="hover-sound">
+            <img src="assets/pictures/Gallery_Pictures/Gallery26.png" alt="gallery Image 26" class="hover-sound">
+            <img src="assets/pictures/Gallery_Pictures/Gallery27.png" alt="gallery Image 27" class="hover-sound">
+            <img src="assets/pictures/Gallery_Pictures/Gallery28.png" alt="gallery Image 28" class="hover-sound">
+            <img src="assets/pictures/Gallery_Pictures/Gallery29.png" alt="gallery Image 29" class="hover-sound">
+            <img src="assets/pictures/Gallery_Pictures/Gallery30.png" alt="gallery Image 30" class="hover-sound">
+            <img src="assets/pictures/Gallery_Pictures/Gallery32.png" alt="gallery Image 32" class="hover-sound">
+            <img src="assets/pictures/Gallery_Pictures/Gallery18.png" alt="gallery Image 18" class="hover-sound">
+        </div>
+    </div>
+    <!-- Modal for full-screen image display -->
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+    </div>
+    <!-- Footer section -->
+    <footer>
+        <p>&copy; 2024 Savor Bake Shop. All rights reserved.</p>
+    </footer>
+    <!-- JavaScript for full-screen image display -->
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var modalImg = document.getElementById("img01");
+        var images = document.querySelectorAll('.image-grid img');
+        images.forEach(img => {
+            img.onclick = function(){
+                modal.style.display = "block";
+                modalImg.src = this.src;
+            }
+        });
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() { 
+            modal.style.display = "none";
+        }
+    </script>
+    <!-- JavaScript for playing sound on hover -->
+    <script>
+        function playSound() {
+            var audio = new Audio('assets/sounds/pop.mp3');
+            audio.play();
+        }
+
+        document.querySelectorAll('.hover-sound').forEach(img => {
+            img.addEventListener('mouseenter', playSound);
+        });
+    </script>
+</body>
+</html>
