@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Savor Bake Shop</title>
+    <!-- Preconnect to Google Fonts for faster loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Link to the "Nanum Gothic" font -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <!-- Link to Font Awesome for social media icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMP1z7nF9Yl+UA3TjIP6VzJb1w6U++Kq5fZkptX" crossorigin="anonymous">
+    <!-- Internal CSS for styling the webpage -->
+    <style>
+        /* Global styles for the body */
+        body {
+            font-family: 'Nanum Gothic', sans-serif; /* Applying the new font */
+            background-color: white;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        /* Styles for the header */
+        header {
+            background-color: #f8f8f8;
+            padding: 20px;
+            text-align: center;
+        }
+        /* Styles for the logo image in the header */
+        header img {
+            max-width: 300px; /* Adjusted logo size */
+        }
+        /* Styles for the tagline under the logo */
+        .tagline {
+            font-style: italic;
+            margin-top: 10px;
+        }
+        /* Styles for the navigation bar */
+        nav {
+            margin: 20px 0;
+            text-align: center;
+        }
+        /* Styles for the navigation links with the new font and double size */
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-family: 'Nanum Gothic', sans-serif; /* Applying the new font */
+            font-size: 2em; /* Doubling the font size */
+        }
+        /* Styles for the main content area */
+        .content {
+            flex: 1;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        /* Styles for the contact section */
+        .contact-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center the content */
+        }
+        /* Styles for the social icons container */
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px; /* Add some margin below the social icons */
+            flex-wrap: wrap; /* Wrap icons for smaller screens */
+        }
+        .social-icons a {
+            margin: 10px; /* Add some margin around links for better spacing */
+            color: #333;
+            text-decoration: none;
+            font-size: 1.5em;
+            display: flex;
+            align-items: center;
+        }
+        .social-icons a:hover {
+            color: #555;
+        }
+        .social-icons img {
+            width: 24px; /* Set the desired width */
+            height: 24px; /* Set the desired height */
+            margin-left: 5px; /* Optional: Add some spacing between text and image */
+        }
+        /* Styles for the contact form */
+        .contact-form {
+            width: 100%;
+            max-width: 600px;
+            padding: 20px;
+            background-color: #f8f8f8;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            box-sizing: border-box;
+        }
+        .contact-form label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+        .contact-form input[type="text"],
+        .contact-form input[type="tel"],
+        .contact-form input[type="email"],
+        .contact-form input[type="submit"],
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            font-size: 1em;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .contact-form textarea {
+            resize: vertical;
+            min-height: 200px; /* Increased height for the textarea */
+        }
+        .contact-form button {
+            background-color: #333;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+        .contact-form button:hover {
+            background-color: #555;
+        }
+        /* Styles for the footer */
+        footer {
+            background-color: #f8f8f8;
+            text-align: center;
+            padding: 10px;
+        }
+        /* Media queries for mobile responsiveness */
+        @media (max-width: 768px) {
+            nav a {
+                font-size: 1.5em; /* Reduce font size for navigation links on smaller screens */
+                display: block;
+                margin: 10px 0;
+            }
+            .social-icons {
+                margin-left: 0; /* Remove the left margin */
+                align-items: center; /* Center the social icons */
+            }
+            .contact-form {
+                padding: 10px; /* Adjust padding for smaller screens */
+            }
+        }
+        @media (max-width: 480px) {
+            header img {
+                max-width: 200px; /* Adjust logo size for very small screens */
+            }
+            nav a {
+                font-size: 1.2em; /* Further reduce font size for navigation links on very small screens */
+            }
+            .contact-form label,
+            .contact-form input,
+            .contact-form textarea,
+            .contact-form button {
+                font-size: 0.9em; /* Adjust font size for smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header section with logo -->
+    <header>
+        <img src="assets/pictures/logo-nobackground.png" alt="Savor Bake Shop Logo">
+        <!-- Featured text within the header -->
+        <div class="featured">
+            Featured in <i>Gulf Coast Weddings Magazine</i>
+        </div>
+    </header>
+    <!-- Navigation bar -->
+    <nav>
+        <a href="index.html">HOME</a>
+        <a href="Gallery.html">GALLERY</a>
+        <a href="Contact.html">CONTACT</a>
+        <a href="About.html">ABOUT</a>
+    </nav>
+    <!-- Contact form section -->
+    <div class="content">
+        <div class="contact-section">
+            <p>Connect with us on social media!</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/savorbakeshop" target="_blank"><img src="assets/pictures/Facebook.png" alt="Facebook"> Facebook</a>
+                <a href="https://www.instagram.com/savorbakeshop" target="_blank"><img src="assets/pictures/Instagram.png" alt="Instagram"> Instagram</a>
+            </div>
+            <p>Questions? Want to place an order? Send us an email below.</p>
+            <form class="contact-form" action="https://formsubmit.co/a404700e28996d9e2b7326ea0ac562c5" method="POST">
+                <label for="name">Name</label>
+                <input type="text" name="name" required>
+
+                <label for="phone">Phone Number</label>
+                <input type="text" name="phone number" required>
+
+                <label for="email">Email Address</label>
+                <input type="email" name="email">
+
+                <label for="inquiry">Inquiry</label>
+                <textarea name="inquiry" rows="6" required></textarea> <!-- Updated textarea with increased rows -->
+
+                <input type="hidden" name="_next" value="https://savorbakeshop.github.io/SavorBakeShop/Thankyou.html">
+                <input type="hidden" name="_subject" value="New Inquiry">
+                <input type="hidden" name="_replyto" value="email">
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    <!-- Footer section -->
+    <footer>
+        <p>&copy; 2024 Savor Bake Shop. All rights reserved.</p>
+    </footer>
+</body>
+</html>
